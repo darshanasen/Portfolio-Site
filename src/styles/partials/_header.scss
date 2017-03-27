@@ -128,17 +128,16 @@ span.alternateJob:before {
 	content: "";
 	font-size: 6rem;
 	animation-name: jobTitle;
-	animation-duration: 7s;
+	animation-duration: 20s;
 	animation-iteration-count: infinite;
 }
 
 @keyframes jobTitle {
-	0% {font-size:6rem; opacity:1;}
-25% {font-size:5rem; opacity:0;}
-50% {font-size:6rem; opacity:1; content: "Changed Text"}
-65% {font-size:5rem; opacity:0;}
-80% {font-size:6rem; opacity:1;}
-90% {font-size:5rem; opacity:0;}
-100% {font-size:6rem;opacity:1; content: "Cookie Maker"}
+	0% {content: "Midnight Snacker"}
+20% {content: "Bonafide Hustler"}
+40% {content: "Haphazard Dancer"}
+60% {content: "Punball Wizard"}
+80% {content: "Cookie Maker"}
+100% {content: "One-Hit Wonder"}
 }
 
