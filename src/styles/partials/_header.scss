@@ -1,15 +1,12 @@
 @import 'variables';
 
 header {
-	background-color: rgba(226, 163, 1, 0.5);
+	background-color: $headerColor;
 }
-
-// .menu {
-// 	width: 100%;
-// }
 
 .menuDiv {
 	display: flex;
+	padding: 2%;
 }
 
 .menuBG {
@@ -41,7 +38,7 @@ header {
 	background: white;
 	margin: 0 auto;
 	z-index: 999;
-	top: 40px;
+	top: 35px;
 }
 
 .hamburger:before {
@@ -84,7 +81,7 @@ ul.nav {
 	z-index: 400;
 	background-color: $overlayColor;
 	opacity: 0.9;
-	transition: all 1s easeOut;
+	transition: all 0.5s easeOut;
 	display: none;
 	&.display {
 		display: block;
@@ -105,17 +102,47 @@ font-size: 4rem;
 
 section.opening {
 	background-color: $headerColor;
-	margin-top: -100px;
-	display: flex;
-	justify-content: space-around;
-	padding: 20%;
+	padding: 12%;
 	width: 100%;
+	text-align: center;
 }
 
 section.opening h1 {
-	margin: 0;
+	margin: 0 auto;
 	font-size: 14rem;
-	// padding: 2%;
+	position: relative;
+	&::before {
+	        content: '';
+	        position: absolute;
+	        top: -20px;
+	        left: 75px;
+	        height: 90px;
+	        width: 50px;
+	        border-top: 10px solid white;
+	        border-left: 10px solid white;
+	       }
+}
+
+section.opening h2 {
+	position: relative;
+	&::after {
+	        content: '';
+	        position: absolute;
+	        bottom: -65px;
+	        right: 50px;
+	        height: 90px;
+	        width: 50px;
+	        border-bottom: 10px solid white;
+	        border-right: 10px solid white;
+	       }
+}
+
+section.opening h1, span.name, span.and {
+	text-shadow: 3px 3px $portfolioColor, 5px 5px $overlayColor;
+}
+
+span.name:hover {
+	color: white;
 }
 
 span.alternateJob:before {
@@ -136,9 +163,9 @@ span.alternateJob:before {
 	40% {opacity: 0; content: "Erratic Dancer"}
 	50% {opacity: 1; content: "Erratic Dancer"}
 	59% {opacity: 0; content: "Erratic Dancer"}
-	60% {opacity: 0; content: "Punball Wizard"}
-	70% {opacity: 1; content: "Punball Wizard"}
-	79% {opacity: 0; content: "Punball Wizard"}
+	60% {opacity: 0; content: "One-Hit Wonder"}
+	70% {opacity: 1; content: "One-Hit Wonder"}
+	79% {opacity: 0; content: "One-Hit Wonder"}
 	80% {opacity: 0; content: "Cookie Maker"}
 	89% {opacity: 1; content: "Cookie Maker"}
 	100% {opacity: 0; content: "Cookie Maker"}

@@ -13,13 +13,33 @@ section.about img, section.about h2, section.about p, section.skillz{
 
 section.about {
 	background-color: white;
-	margin-top: -75px;
+	margin: -115px 0;
 	display: flex;
 	padding: 5%;
 }
 
 section.about h2 {
 	color: $overlayColor;
+	text-align: right;
+	position: relative;
+	&::after {
+	        content: '';
+	        position: absolute;
+	        top: -45px;
+	        right: -40px;
+	        height: 60px;
+	        width: 40px;
+	        border-top: 10px solid $navColor;
+	        border-right: 10px solid $navColor;
+	    }
+}
+
+section.about p {
+	font-size: 3rem;
+}
+
+div.aboutText {
+	padding: 5%;
 }
 
 section.about img {
@@ -51,8 +71,27 @@ section.portfolio {
 }
 
 section.portfolio h2 {
-	margin: 10%;
 	color: $navColor;
+	position: relative;
+	&::after {
+	        content: '';
+	        position: absolute;
+	        top: -45px;
+	        left: -40px;
+	        height: 60px;
+	        width: 40px;
+	        border-top: 10px solid $alternateColor;
+	        border-left: 10px solid $alternateColor;
+	    }
+}
+
+div.portfolioGrid {
+	display: flex;
+	flex-direction: column;
+}
+
+div.portfolioGrid h3 {
+	font-family: $headerFont;
 }
 
 section.portfolio div {
@@ -78,12 +117,32 @@ section.portfolio div:hover .overlay {
 	display: block;
 }
 
+section.portfolio div .overlay p {
+	color: white;
+	text-align: center;
+	font-size: 3rem;
+}
+
 section.skillz {
 	background-color: white;
+	padding: 10%;
 }
 
 section.skillz h2 {
 	color: $overlayColor;
+	text-align: right;
+	margin: 0;
+	position: relative;
+	&::after {
+	        content: '';
+	        position: absolute;
+	        top: -45px;
+	        right: -40px;
+	        height: 60px;
+	        width: 40px;
+	        border-top: 10px solid $navColor;
+	        border-right: 10px solid $navColor;
+	    }
 }
 
 section.skillz h3 {
@@ -108,19 +167,10 @@ div.interests1, div.interests2 {
 	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	width: 50%;
+	width: 70%;
 	margin: 0 auto;
 	padding: 5%;
 }
-
-// div.toolbox:before {
-// 	content: '';
-// 	    height: 100%;
-//     display: block;
-//     width: 20%;
-//     background: $portfolioColor;
-//     border-right: 1px white;
-// }
 
 div.box3, div.box4 {
 	display: flex;
@@ -131,7 +181,7 @@ div.toolbox {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	width: 50%;
+	width: 70%;
 	margin: 0 auto;
 }
 

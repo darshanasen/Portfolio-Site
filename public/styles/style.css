@@ -156,12 +156,17 @@ p {
 a {
   text-decoration: none; }
 
+.wrapper {
+  max-width: 1800px;
+  margin: 0 auto; }
+
 header {
-  background-color: rgba(226, 163, 1, 0.5); }
+  background-color: #ffd521; }
 
 .menuDiv {
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  padding: 2%; }
 
 .menuBG {
   background-color: #e2a301;
@@ -189,7 +194,7 @@ header {
   background: white;
   margin: 0 auto;
   z-index: 999;
-  top: 40px; }
+  top: 35px; }
 
 .hamburger:before {
   content: "";
@@ -227,7 +232,7 @@ ul.nav {
   z-index: 400;
   background-color: #67917a;
   opacity: 0.9;
-  transition: all 1s easeOut;
+  transition: all 0.5s easeOut;
   display: none; }
   ul.nav.display {
     display: block; }
@@ -244,17 +249,41 @@ ul.nav li a {
 
 section.opening {
   background-color: #ffd521;
-  margin-top: -100px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding: 20%;
-  width: 100%; }
+  padding: 12%;
+  width: 100%;
+  text-align: center; }
 
 section.opening h1 {
-  margin: 0;
-  font-size: 14rem; }
+  margin: 0 auto;
+  font-size: 14rem;
+  position: relative; }
+  section.opening h1::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 75px;
+    height: 90px;
+    width: 50px;
+    border-top: 10px solid white;
+    border-left: 10px solid white; }
+
+section.opening h2 {
+  position: relative; }
+  section.opening h2::after {
+    content: '';
+    position: absolute;
+    bottom: -65px;
+    right: 50px;
+    height: 90px;
+    width: 50px;
+    border-bottom: 10px solid white;
+    border-right: 10px solid white; }
+
+section.opening h1, span.name, span.and {
+  text-shadow: 3px 3px #daeee9, 5px 5px #67917a; }
+
+span.name:hover {
+  color: white; }
 
 span.alternateJob:before {
   content: "";
@@ -293,13 +322,13 @@ span.alternateJob:before {
     content: "Erratic Dancer"; }
   60% {
     opacity: 0;
-    content: "Punball Wizard"; }
+    content: "One-Hit Wonder"; }
   70% {
     opacity: 1;
-    content: "Punball Wizard"; }
+    content: "One-Hit Wonder"; }
   79% {
     opacity: 0;
-    content: "Punball Wizard"; }
+    content: "One-Hit Wonder"; }
   80% {
     opacity: 0;
     content: "Cookie Maker"; }
@@ -326,13 +355,30 @@ section.about img, section.about h2, section.about p, section.skillz {
 
 section.about {
   background-color: white;
-  margin-top: -75px;
+  margin: -115px 0;
   display: -ms-flexbox;
   display: flex;
   padding: 5%; }
 
 section.about h2 {
-  color: #67917a; }
+  color: #67917a;
+  text-align: right;
+  position: relative; }
+  section.about h2::after {
+    content: '';
+    position: absolute;
+    top: -45px;
+    right: -40px;
+    height: 60px;
+    width: 40px;
+    border-top: 10px solid #e2a301;
+    border-right: 10px solid #e2a301; }
+
+section.about p {
+  font-size: 3rem; }
+
+div.aboutText {
+  padding: 5%; }
 
 section.about img {
   margin: 5%; }
@@ -363,8 +409,26 @@ section.portfolio {
   margin: -100px 0; }
 
 section.portfolio h2 {
-  margin: 10%;
-  color: #e2a301; }
+  color: #e2a301;
+  position: relative; }
+  section.portfolio h2::after {
+    content: '';
+    position: absolute;
+    top: -45px;
+    left: -40px;
+    height: 60px;
+    width: 40px;
+    border-top: 10px solid #abd2c8;
+    border-left: 10px solid #abd2c8; }
+
+div.portfolioGrid {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+
+div.portfolioGrid h3 {
+  font-family: "Fredericka the Great", cursive; }
 
 section.portfolio div {
   position: relative;
@@ -388,11 +452,29 @@ section.portfolio div:hover .overlay {
   opacity: 0.7;
   display: block; }
 
+section.portfolio div .overlay p {
+  color: white;
+  text-align: center;
+  font-size: 3rem; }
+
 section.skillz {
-  background-color: white; }
+  background-color: white;
+  padding: 10%; }
 
 section.skillz h2 {
-  color: #67917a; }
+  color: #67917a;
+  text-align: right;
+  margin: 0;
+  position: relative; }
+  section.skillz h2::after {
+    content: '';
+    position: absolute;
+    top: -45px;
+    right: -40px;
+    height: 60px;
+    width: 40px;
+    border-top: 10px solid #e2a301;
+    border-right: 10px solid #e2a301; }
 
 section.skillz h3 {
   text-align: center;
@@ -417,7 +499,7 @@ div.interests1, div.interests2 {
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 50%;
+  width: 70%;
   margin: 0 auto;
   padding: 5%; }
 
@@ -434,7 +516,7 @@ div.toolbox {
       flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 50%;
+  width: 70%;
   margin: 0 auto; }
 
 div.box1, div.box2 {
