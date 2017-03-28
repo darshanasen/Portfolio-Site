@@ -3,7 +3,7 @@
 @import 'partials/header';
 @import 'partials/footer';
 
-section.about, section.skillz h2, section.skillz h3, section.skillz div.toolbox, section.skillz div.interests {
+section.about, section.skillz h2, section.skillz div.toolbox, section.skillz div.interests1, section.skillz div.interests2 {
 	transform: skewY(-5deg);
 }
 
@@ -86,8 +86,62 @@ section.skillz h2 {
 	color: $overlayColor;
 }
 
+section.skillz h3 {
+	text-align: center;
+	color: $alternateColor;
+}
+
 section.skillz i {
 	color: $navColor;
 	font-size: 7rem;
 	padding: 2%;
+}
+
+section.skillz svg {
+	fill: $navColor;
+	width: 7rem;
+	height: 7rem;
+}
+
+div.interests1, div.interests2 {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width: 50%;
+	margin: 0 auto;
+	padding: 5%;
+}
+
+// div.toolbox:before {
+// 	content: '';
+// 	    height: 100%;
+//     display: block;
+//     width: 20%;
+//     background: $portfolioColor;
+//     border-right: 1px white;
+// }
+
+div.box3, div.box4 {
+	display: flex;
+	justify-content: space-around;
+}
+
+div.toolbox {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 50%;
+	margin: 0 auto;
+}
+
+div.box1, div.box2 {
+	display: flex;
+	justify-content: space-between;
+}
+
+div.toolbox i:hover, div.toolbox svg:hover, div.interests1 i:hover, div.interests2 i:hover {
+	// margin: 0 auto;
+	color: $headerColor;
+	fill: $headerColor;
 }
