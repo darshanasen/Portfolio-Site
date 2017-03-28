@@ -1,9 +1,32 @@
 footer {
 	background-color: $headerColor;
+	margin-top: -100px;
+	padding-top: 7%;
+	text-align: center;
+}
+
+footer h2 {
+	text-align: left;
+	padding-left: 5%;
+	position: relative;
+	&::before {
+	        content: '';
+	        position: absolute;
+	        top: -30px;
+	        left: 30px;
+	        height: 60px;
+	        width: 40px;
+	        border-top: 10px solid white;
+	        border-left: 10px solid white;
+	    }
 }
 
 div.socialIcons i {
 	font-size: 4rem;
 	padding: 2%;
 	color: $overlayColor;
+}
+
+div.socialIcons i:hover {
+	color: $alternateColor;
 }

@@ -156,10 +156,6 @@ p {
 a {
   text-decoration: none; }
 
-.wrapper {
-  max-width: 1800px;
-  margin: 0 auto; }
-
 header {
   background-color: #ffd521; }
 
@@ -172,7 +168,6 @@ header {
   background-color: #e2a301;
   width: 80px;
   height: 80px;
-  border-radius: 100%;
   z-index: 999;
   position: relative;
   cursor: pointer;
@@ -282,9 +277,6 @@ section.opening h2 {
 section.opening h1, span.name, span.and {
   text-shadow: 3px 3px #daeee9, 5px 5px #67917a; }
 
-span.name:hover {
-  color: white; }
-
 span.alternateJob:before {
   content: "";
   font-size: 6rem;
@@ -340,12 +332,32 @@ span.alternateJob:before {
     content: "Cookie Maker"; } }
 
 footer {
-  background-color: #ffd521; }
+  background-color: #ffd521;
+  margin-top: -100px;
+  padding-top: 7%;
+  text-align: center; }
+
+footer h2 {
+  text-align: left;
+  padding-left: 5%;
+  position: relative; }
+  footer h2::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 30px;
+    height: 60px;
+    width: 40px;
+    border-top: 10px solid white;
+    border-left: 10px solid white; }
 
 div.socialIcons i {
   font-size: 4rem;
   padding: 2%;
   color: #67917a; }
+
+div.socialIcons i:hover {
+  color: #abd2c8; }
 
 section.about, section.skillz h2, section.skillz div.toolbox, section.skillz div.interests1, section.skillz div.interests2 {
   transform: skewY(-5deg); }
@@ -411,7 +423,7 @@ section.portfolio {
 section.portfolio h2 {
   color: #e2a301;
   position: relative; }
-  section.portfolio h2::after {
+  section.portfolio h2::before {
     content: '';
     position: absolute;
     top: -45px;
@@ -424,15 +436,30 @@ section.portfolio h2 {
 div.portfolioGrid {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column; }
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  margin: 10% 0; }
 
 div.portfolioGrid h3 {
   font-family: "Fredericka the Great", cursive; }
 
+div.portfolioGrid button {
+  border: 2px solid #67917a;
+  background-color: #abd2c8;
+  border-radius: 10px;
+  box-shadow: 0 6px #67917a;
+  padding: 10px;
+  margin: 10px; }
+
+div.portfolioGrid button:hover {
+  box-shadow: 0 4px #67917a;
+  top: 2px; }
+
+div.portfolioGrid a {
+  color: black; }
+
 section.portfolio div {
-  position: relative;
-  display: inline-block; }
+  position: relative; }
 
 section.portfolio div .overlay {
   position: absolute;
@@ -446,16 +473,39 @@ section.portfolio div .overlay {
   opacity: .9;
   transition: all 0.5s ease; }
 
-section.portfolio div:hover .overlay {
+div.portfolioGrid div:hover .overlay {
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 15%, 0% 15%);
           clip-path: polygon(0% 0%, 100% 0%, 100% 15%, 0% 15%);
   opacity: 0.7;
   display: block; }
 
-section.portfolio div .overlay p {
+section.portfolio div.portfolioGrid .overlay p {
   color: white;
   text-align: center;
   font-size: 3rem; }
+
+div.portfolioGrid div:hover .overlay p {
+  display: none; }
+
+div.frameworks {
+  border-bottom: 3px solid #ffd521;
+  border-top: 3px solid #ffd521;
+  margin-right: 2%;
+  display: inline-block; }
+
+div.right {
+  text-align: right; }
+  div.right::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: -50px;
+    height: 300px;
+    width: 300px;
+    border-top: 10px solid #e2a301;
+    border-right: 10px solid #e2a301;
+    border-bottom: 10px solid #e2a301;
+    z-index: 1; }
 
 section.skillz {
   background-color: white;
@@ -506,8 +556,8 @@ div.interests1, div.interests2 {
 div.box3, div.box4 {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around; }
+  -ms-flex-pack: center;
+      justify-content: center; }
 
 div.toolbox {
   display: -ms-flexbox;
@@ -524,7 +574,3 @@ div.box1, div.box2 {
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between; }
-
-div.toolbox i:hover, div.toolbox svg:hover, div.interests1 i:hover, div.interests2 i:hover {
-  color: #ffd521;
-  fill: #ffd521; }

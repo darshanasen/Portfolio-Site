@@ -73,7 +73,7 @@ section.portfolio {
 section.portfolio h2 {
 	color: $navColor;
 	position: relative;
-	&::after {
+	&::before {
 	        content: '';
 	        position: absolute;
 	        top: -45px;
@@ -87,16 +87,34 @@ section.portfolio h2 {
 
 div.portfolioGrid {
 	display: flex;
-	flex-direction: column;
+	justify-content: space-between;
+	margin: 10% 0;
 }
 
 div.portfolioGrid h3 {
 	font-family: $headerFont;
 }
 
+div.portfolioGrid button {
+	border: 2px solid $overlayColor;
+	background-color: $alternateColor;
+	border-radius: 10px;
+	box-shadow: 0 6px $overlayColor;
+	padding: 10px;
+	margin: 10px;
+}
+
+div.portfolioGrid button:hover {
+	box-shadow: 0 4px $overlayColor;
+	top: 2px;
+}
+
+div.portfolioGrid a {
+	color: black;
+}
+
 section.portfolio div {
 	position: relative;
-	display: inline-block;
 }
 
 section.portfolio div .overlay {
@@ -111,17 +129,63 @@ section.portfolio div .overlay {
 	transition: all 0.5s ease;
 }
 
-section.portfolio div:hover .overlay {
+div.portfolioGrid div:hover .overlay {
 	clip-path: polygon(0% 0%, 100% 0%, 100% 15%, 0% 15%);
 	opacity: 0.7;
 	display: block;
 }
 
-section.portfolio div .overlay p {
+section.portfolio div.portfolioGrid .overlay p {
 	color: white;
 	text-align: center;
 	font-size: 3rem;
 }
+
+div.portfolioGrid div:hover .overlay p {
+	display: none;
+}
+
+div.frameworks {
+	border-bottom: 3px solid $headerColor;
+	border-top: 3px solid $headerColor;
+	margin-right: 2%;
+	display: inline-block;
+}
+
+div.right {
+	text-align: right;
+	&::before {
+	        content: '';
+	        position: absolute;
+	        top: 0px;
+	        right: -50px;
+	        height: 300px;
+	        width: 300px;
+	        border-top: 10px solid $navColor;
+	        border-right: 10px solid $navColor;
+	        border-bottom: 10px solid $navColor;
+	        z-index: 1;
+	    }
+}
+
+// div.left {
+// 	&::after {
+// 	        content: '';
+// 	        position: absolute;
+// 	        top: 0px;
+// 	        left: -50px;
+// 	        height: 300px;
+// 	        width: 300px;
+// 	        border-top: 10px solid $navColor;
+// 	        border-left: 10px solid $navColor;
+// 	        border-bottom: 10px solid $navColor;
+// 	        z-index: 1;
+// 	    }
+// }
+
+// div.portfolioDescription button{
+// 	z-index: 9999999999999;
+// }
 
 section.skillz {
 	background-color: white;
@@ -174,7 +238,7 @@ div.interests1, div.interests2 {
 
 div.box3, div.box4 {
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
 }
 
 div.toolbox {
@@ -188,10 +252,4 @@ div.toolbox {
 div.box1, div.box2 {
 	display: flex;
 	justify-content: space-between;
-}
-
-div.toolbox i:hover, div.toolbox svg:hover, div.interests1 i:hover, div.interests2 i:hover {
-	// margin: 0 auto;
-	color: $headerColor;
-	fill: $headerColor;
 }
