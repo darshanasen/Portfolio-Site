@@ -96,7 +96,7 @@ div.portfolioGrid h3 {
 }
 
 div.portfolioGrid button {
-	border: 2px solid $overlayColor;
+	border: 5px solid $alternateColor;
 	background-color: $alternateColor;
 	border-radius: 10px;
 	box-shadow: 0 6px $overlayColor;
@@ -158,34 +158,34 @@ div.right {
 	        content: '';
 	        position: absolute;
 	        top: 0px;
-	        right: -50px;
+	        left: 0px;
 	        height: 300px;
 	        width: 300px;
 	        border-top: 10px solid $navColor;
-	        border-right: 10px solid $navColor;
+	        border-left: 10px solid $navColor;
 	        border-bottom: 10px solid $navColor;
 	        z-index: 1;
 	    }
 }
 
-// div.left {
-// 	&::after {
-// 	        content: '';
-// 	        position: absolute;
-// 	        top: 0px;
-// 	        left: -50px;
-// 	        height: 300px;
-// 	        width: 300px;
-// 	        border-top: 10px solid $navColor;
-// 	        border-left: 10px solid $navColor;
-// 	        border-bottom: 10px solid $navColor;
-// 	        z-index: 1;
-// 	    }
-// }
+div.left {
+	&::after {
+	        content: '';
+	        position: absolute;
+	        top: 0px;
+	        left: -50px;
+	        height: 300px;
+	        width: 300px;
+	        border-top: 10px solid $navColor;
+	        border-left: 10px solid $navColor;
+	        border-bottom: 10px solid $navColor;
+	        z-index: 1;
+	    }
+}
 
-// div.portfolioDescription button{
-// 	z-index: 9999999999999;
-// }
+div.portfolioDescription button{
+	z-index: 9999999999999;
+}
 
 section.skillz {
 	background-color: white;

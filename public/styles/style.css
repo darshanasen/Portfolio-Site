@@ -136,7 +136,7 @@ body {
   font-family: "Raleway", sans-serif; }
 
 h1, h2 {
-  font-family: "Fredericka the Great", cursive; }
+  font-family: "Playfair Display", serif; }
 
 h3 {
   font-family: "Raleway", sans-serif; }
@@ -157,12 +157,17 @@ a {
   text-decoration: none; }
 
 header {
-  background-color: #ffd521; }
-
-.menuDiv {
+  background-color: #ffd521;
   display: -ms-flexbox;
   display: flex;
-  padding: 2%; }
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 100vh; }
+
+.menuDiv {
+  margin-bottom: 10%; }
 
 .menuBG {
   background-color: #e2a301;
@@ -237,6 +242,9 @@ ul.nav li {
   padding: 3%;
   transition: top 1.5s ease; }
 
+ul.nav a:hover {
+  border-bottom: 3px solid #e2a301; }
+
 ul.nav li a {
   color: #ffd521;
   text-transform: uppercase;
@@ -244,27 +252,19 @@ ul.nav li a {
 
 section.opening {
   background-color: #ffd521;
-  padding: 12%;
   width: 100%;
-  text-align: center; }
-
-section.opening h1 {
-  margin: 0 auto;
-  font-size: 14rem;
+  text-align: center;
   position: relative; }
-  section.opening h1::before {
+  section.opening::before {
     content: '';
     position: absolute;
-    top: -20px;
-    left: 75px;
+    top: 0px;
+    left: 500px;
     height: 90px;
     width: 50px;
     border-top: 10px solid white;
     border-left: 10px solid white; }
-
-section.opening h2 {
-  position: relative; }
-  section.opening h2::after {
+  section.opening::after {
     content: '';
     position: absolute;
     bottom: -65px;
@@ -273,6 +273,13 @@ section.opening h2 {
     width: 50px;
     border-bottom: 10px solid white;
     border-right: 10px solid white; }
+
+section.opening h1 {
+  margin: 0 auto;
+  font-size: 14rem; }
+
+section.opening h2 {
+  margin: 0; }
 
 section.opening h1, span.name, span.and {
   text-shadow: 3px 3px #daeee9, 5px 5px #67917a; }
@@ -305,22 +312,22 @@ span.alternateJob:before {
     content: "Bonafide Hustler"; }
   40% {
     opacity: 0;
-    content: "Erratic Dancer"; }
+    content: "Jumanji Enthusiast"; }
   50% {
     opacity: 1;
-    content: "Erratic Dancer"; }
+    content: "Jumanji Enthusiast"; }
   59% {
     opacity: 0;
-    content: "Erratic Dancer"; }
+    content: "Jumanji Enthusiast"; }
   60% {
     opacity: 0;
-    content: "One-Hit Wonder"; }
+    content: "Punball Wizard"; }
   70% {
     opacity: 1;
-    content: "One-Hit Wonder"; }
+    content: "Punball Wizard"; }
   79% {
     opacity: 0;
-    content: "One-Hit Wonder"; }
+    content: "Punball Wizard"; }
   80% {
     opacity: 0;
     content: "Cookie Maker"; }
@@ -354,7 +361,7 @@ footer h2 {
 div.socialIcons i {
   font-size: 4rem;
   padding: 2%;
-  color: #67917a; }
+  color: #f7fff8; }
 
 div.socialIcons i:hover {
   color: #abd2c8; }
@@ -441,10 +448,10 @@ div.portfolioGrid {
   margin: 10% 0; }
 
 div.portfolioGrid h3 {
-  font-family: "Fredericka the Great", cursive; }
+  font-family: "Playfair Display", serif; }
 
 div.portfolioGrid button {
-  border: 2px solid #67917a;
+  border: 5px solid #abd2c8;
   background-color: #abd2c8;
   border-radius: 10px;
   box-shadow: 0 6px #67917a;
@@ -499,13 +506,28 @@ div.right {
     content: '';
     position: absolute;
     top: 0px;
-    right: -50px;
+    left: 0px;
     height: 300px;
     width: 300px;
     border-top: 10px solid #e2a301;
-    border-right: 10px solid #e2a301;
+    border-left: 10px solid #e2a301;
     border-bottom: 10px solid #e2a301;
     z-index: 1; }
+
+div.left::after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: -50px;
+  height: 300px;
+  width: 300px;
+  border-top: 10px solid #e2a301;
+  border-left: 10px solid #e2a301;
+  border-bottom: 10px solid #e2a301;
+  z-index: 1; }
+
+div.portfolioDescription button {
+  z-index: 9999999999999; }
 
 section.skillz {
   background-color: white;

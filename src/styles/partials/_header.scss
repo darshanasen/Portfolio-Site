@@ -2,11 +2,14 @@
 
 header {
 	background-color: $headerColor;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
 }
 
 .menuDiv {
-	display: flex;
-	padding: 2%;
+	margin-bottom: 10%;
 }
 
 .menuBG {
@@ -93,6 +96,10 @@ ul.nav li {
 	transition: top 1.5s ease;
 }
 
+ul.nav a:hover{
+	border-bottom: 3px solid $navColor;
+}
+
 ul.nav li a {
 color: $headerColor;
 text-transform: uppercase;
@@ -101,30 +108,20 @@ font-size: 4rem;
 
 section.opening {
 	background-color: $headerColor;
-	padding: 12%;
 	width: 100%;
 	text-align: center;
-}
-
-section.opening h1 {
-	margin: 0 auto;
-	font-size: 14rem;
 	position: relative;
 	&::before {
 	        content: '';
 	        position: absolute;
-	        top: -20px;
-	        left: 75px;
+	        top: 0px;
+	        left: 500px;
 	        height: 90px;
 	        width: 50px;
 	        border-top: 10px solid white;
 	        border-left: 10px solid white;
 	       }
-}
-
-section.opening h2 {
-	position: relative;
-	&::after {
+		&::after {
 	        content: '';
 	        position: absolute;
 	        bottom: -65px;
@@ -134,6 +131,15 @@ section.opening h2 {
 	        border-bottom: 10px solid white;
 	        border-right: 10px solid white;
 	       }
+}
+
+section.opening h1 {
+	margin: 0 auto;
+	font-size: 14rem;
+}
+
+section.opening h2 {
+	margin: 0;
 }
 
 section.opening h1, span.name, span.and {
@@ -155,15 +161,16 @@ span.alternateJob:before {
 	20% {opacity: 0; content: "Bonafide Hustler"}
 	30% {opacity: 1; content: "Bonafide Hustler"}
 	39% {opacity: 0; content: "Bonafide Hustler"}
-	40% {opacity: 0; content: "Erratic Dancer"}
-	50% {opacity: 1; content: "Erratic Dancer"}
-	59% {opacity: 0; content: "Erratic Dancer"}
-	60% {opacity: 0; content: "One-Hit Wonder"}
-	70% {opacity: 1; content: "One-Hit Wonder"}
-	79% {opacity: 0; content: "One-Hit Wonder"}
+	40% {opacity: 0; content: "Jumanji Enthusiast"}
+	50% {opacity: 1; content: "Jumanji Enthusiast"}
+	59% {opacity: 0; content: "Jumanji Enthusiast"}
+	60% {opacity: 0; content: "Punball Wizard"}
+	70% {opacity: 1; content: "Punball Wizard"}
+	79% {opacity: 0; content: "Punball Wizard"}
 	80% {opacity: 0; content: "Cookie Maker"}
 	89% {opacity: 1; content: "Cookie Maker"}
 	100% {opacity: 0; content: "Cookie Maker"}
 // 100% {opacity: 1; content: "One-Hit Wonder"}
 }
+
 
