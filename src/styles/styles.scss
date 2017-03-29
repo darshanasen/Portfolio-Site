@@ -13,9 +13,12 @@ section.about img, section.about h2, section.about p, section.skillz{
 
 section.about {
 	background-color: white;
-	margin: -115px 0;
+	margin: -90px 0;
+}
+
+div.about {
 	display: flex;
-	padding: 5%;
+	align-items: center;
 }
 
 section.about h2 {
@@ -26,16 +29,12 @@ section.about h2 {
 	        content: '';
 	        position: absolute;
 	        top: -45px;
-	        right: -40px;
+	        right: -50px;
 	        height: 60px;
 	        width: 40px;
 	        border-top: 10px solid $navColor;
 	        border-right: 10px solid $navColor;
 	    }
-}
-
-section.about p {
-	font-size: 3rem;
 }
 
 div.aboutText {
@@ -44,6 +43,16 @@ div.aboutText {
 
 section.about img {
 	margin: 5%;
+	position: relative;
+	&::after {
+		content: '';
+		position: absolute;
+		top: -45px;
+		left: -40px;
+		height: 100%;
+		width: 100%;
+		box-shadow: 0px 0px 12px gray;
+	}
 }
 
 .clip-diamond {
@@ -58,8 +67,6 @@ section.about img {
   clip-path: polygon(50% 0%, 50% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 100%);
   clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%, 0% 50%);
   clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%, 0% 0%);
-  transform: scale(1.2);
-  border-radius: 200px;
    box-shadow: 0 0 10px rgba(0,0,0,.3);
   opacity: 1;
 }
@@ -113,78 +120,86 @@ div.portfolioGrid a {
 	color: black;
 }
 
+div.portfolioGrid div {
+	width: 50%;
+}
+
+div.portfolioDescription {
+	width: 50%;
+}
+
 section.portfolio div {
 	position: relative;
 }
 
-section.portfolio div .overlay {
+section.portfolio div.gridLeft .overlay {
+	width: 100%;
+	height: 100%;
 	position: absolute;
 	top: 0;
 	left: 0;
 	bottom: 0;
 	right: 0;
 	background-color: $overlayColor;
-	clip-path: polygon(0% 0%, 100% 0%, 100% 55%, 0% 85%);
+	clip-path: polygon(0% 0%, 25% 0, 85% 100%, 0% 100%);
 	opacity: .9;
 	transition: all 0.5s ease;
 }
 
-div.portfolioGrid div:hover .overlay {
-	clip-path: polygon(0% 0%, 100% 0%, 100% 15%, 0% 15%);
+div.gridLeft div:hover .overlay {
+	clip-path: polygon(0% 0%, 15% 0%, 15% 100%, 0% 100%);
 	opacity: 0.7;
 	display: block;
 }
 
-section.portfolio div.portfolioGrid .overlay p {
-	color: white;
-	text-align: center;
-	font-size: 3rem;
+section.portfolio div.gridRight .overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: $overlayColor;
+	clip-path: polygon(75% 0%, 100% 0%, 100% 100%, 15% 100%);
+	opacity: .9;
+	transition: all 0.5s ease;
 }
 
-div.portfolioGrid div:hover .overlay p {
-	display: none;
+div.gridRight div:hover .overlay {
+	clip-path: polygon(85% 0%, 100% 0%, 100% 100%, 85% 100%);
+	opacity: 0.7;
+	display: block;
+}
+
+div.portfolioGrid .overlay p {
+	color: white;
+	font-size: 3rem;
+	margin: 0;
+}
+
+div.gridRight::after {
+	        content: '';
+	        position: absolute;
+	        top: -60px;
+	        right: -20px;
+	        height: 400px;
+	        width: 200px;
+	        border-top: 10px solid $navColor;
+	        border-right: 10px solid $navColor;
+	        border-bottom: 10px solid $navColor;
+	        z-index: 1;
 }
 
 div.frameworks {
-	border-bottom: 3px solid $headerColor;
-	border-top: 3px solid $headerColor;
+	border-bottom: 3px solid $navColor;
+	border-top: 3px solid $navColor;
 	margin-right: 2%;
-	display: inline-block;
+	display: inline;
 }
 
 div.right {
 	text-align: right;
-	&::before {
-	        content: '';
-	        position: absolute;
-	        top: 0px;
-	        left: 0px;
-	        height: 300px;
-	        width: 300px;
-	        border-top: 10px solid $navColor;
-	        border-left: 10px solid $navColor;
-	        border-bottom: 10px solid $navColor;
-	        z-index: 1;
-	    }
-}
-
-div.left {
-	&::after {
-	        content: '';
-	        position: absolute;
-	        top: 0px;
-	        left: -50px;
-	        height: 300px;
-	        width: 300px;
-	        border-top: 10px solid $navColor;
-	        border-left: 10px solid $navColor;
-	        border-bottom: 10px solid $navColor;
-	        z-index: 1;
-	    }
-}
-
-div.portfolioDescription button{
-	z-index: 9999999999999;
 }
 
 section.skillz {

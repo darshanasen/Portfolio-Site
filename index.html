@@ -10,116 +10,122 @@
 	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/4f6a4b08efdad6bb29f9cc801f5c07e263b39907/devicon.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 </head>
-<body class="wrapper">
+<body>
 
 <header>
 	<div class="menuDiv">
-		<div class="menuBG wrapper2">
+		<div class="menuBG">
 			<div class="hamburger"></div>
 		</div>
 	</div>
-	<ul class="nav wrapper">
+	<ul class="nav">
 		<li><a class="navLink" href="#about">About</a></li>
 		<li><a class="navLink" href="#portfolio">Portfolio</a></li>
 		<li><a class="navLink" href="#skillz">Toolbox</a></li>
 		<li><a class="navLink" href="#contact">Contact</a></li>
 	</ul>
 
-	<section class="opening">
-	<h1 class="animated tada wrapper2">Hi!</h1>
+	<section class="opening wrapper">
+	<h1 class="animated tada">Hi!</h1>
 	<h2>I'm <span class="name">Darshana</span>: <br> Web Developer <span class="and">&</span> <br><span class="alternateJob"></span></h2>
 	</section>	
 </header>
 
 <section id="about" class="about">
-	<img src="assets/headshot2.jpg" class="clip-diamond" width="400" height="444">
-	<div class="aboutText">
-		<h2>Greetings!</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus veritatis perferendis, enim ipsum similique fugit nihil expedita, iste, consectetur fugiat aspernatur sequi dolore blanditiis dolorem, eum magni quam. Incidunt asperiores perferendis vel! Voluptatibus, numquam voluptas doloremque eaque! Quasi enim, sit distinctio, error iste vel blanditiis? Atque sint aliquid provident nostrum.</p>
+	<div class="about wrapper">
+		<img src="assets/headshot2.jpg" class="clip-diamond" width="400" height="444">
+		<div class="aboutText">
+			<h2>Greetings!</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus veritatis perferendis, enim ipsum similique fugit nihil expedita, iste, consectetur fugiat aspernatur sequi dolore blanditiis dolorem, eum magni quam. Incidunt asperiores perferendis vel! Voluptatibus, numquam voluptas doloremque eaque! Quasi enim, sit distinctio, error iste vel blanditiis? Atque sint aliquid provident nostrum.</p>
+		</div>
 	</div>
 </section>
 	
 <section id="portfolio" class="portfolio">
-	<h2>Portfolio</h2>
-	<div class="portfolioGrid">
-		<div>
-			<img src="assets/podfatherLaptop.png" width="450" height="224" alt="" />
-				<div class="overlay">
-					<p>React Project</p>
-				</div>
+	<div class="portfolio wrapper">
+		<h2>Portfolio</h2>
+		<div class="portfolioGrid gridLeft">
+			<div>
+				<img src="https://unsplash.it/500/500" alt="" />
+					<div class="overlay">
+						<p>React Project</p>
+					</div>
+			</div>
+			<div class="portfolioDescription right">
+				<h3>The Podfather</h3>
+				<div class="frameworks">React</div>
+				<div class="frameworks">Firebase</div>
+				<div class="frameworks">JavaScript</div>
+				<div class="frameworks">APIs</div>
+				<div class="frameworks">SCSS</div>
+				<div class="frameworks">ES6</div>
+				<div class="frameworks">HTML & CSS</div>
+				<p>A web application which allows users to search for and store their new favourite podcasts.</p>
+				<button><a href="https://podsavetheday.firebaseapp.com" target="_blank">View Live</a></button>
+				<button><a href="https://github.com/darshanasen/React-Project" target="_blank">GitHub Repo</a></button>
+			</div>
 		</div>
-		<div class="portfolioDescription right">
-			<h3>The Podfather</h3>
-			<div class="frameworks">React</div>
-			<div class="frameworks">Firebase</div>
-			<div class="frameworks">JavaScript</div>
-			<div class="frameworks">APIs</div>
-			<div class="frameworks">Sass</div>
-			<div class="frameworks">HTML & CSS</div>
-			<p>A web application which allows users to search for and store their new favourite podcasts.</p>
-			<button><a href="https://podsavetheday.firebaseapp.com" target="_blank">View Live</a></button>
-			<button><a href="https://github.com/darshanasen/React-Project" target="_blank">GitHub Repo</a></button>
+		<div class="portfolioGrid gridRight">
+			<div class="portfolioDescription left">
+				<h3>FNG: Fake News Generator</h3>
+				<div class="frameworks">JavaScript</div>
+				<div class="frameworks">jQuery</div>
+				<div class="frameworks">SCSS</div>
+				<div class="frameworks">HTML & CSS</div>
+				<p>A "news" website which generates an article based on user selection.</p>
+				<button><a href="http://darshanasen.com/fakenews/" target="_blank">View Live</a></button>
+				<button><a href="https://github.com/darshanasen/projectThree" target="_blank">GitHub Repo</a></button>
+			</div>
+			<div>
+				<img src="https://unsplash.it/500/500" alt="" />
+					<div class="overlay">
+						<p>Pair Programming Project</p>
+					</div>
+			</div>
 		</div>
-	</div>
-	<div class="portfolioGrid">
-		<div class="portfolioDescription left">
-			<h3>FNG: Fake News Generator</h3>
-			<div class="frameworks">JavaScript</div>
-			<div class="frameworks">jQuery</div>
-			<div class="frameworks">Sass</div>
-			<div class="frameworks">HTML & CSS</div>
-			<p>A "news" website which generates an article based on user selection.</p>
-			<button><a href="http://darshanasen.com/fakenews/" target="_blank">View Live</a></button>
-			<button><a href="https://github.com/darshanasen/projectThree" target="_blank">GitHub Repo</a></button>
+		<div class="portfolioGrid gridLeft">
+			<div>
+				<img src="https://unsplash.it/500/500" alt="" />
+					<div class="overlay">
+						<p>Client Project</p>
+					</div>
+			</div>
+			<div class="portfolioDescription right">
+				<h3>Bookshare</h3>
+				<div class="frameworks">JavaScript</div>
+				<div class="frameworks">jQuery</div>
+				<div class="frameworks">Firebase</div>
+				<div class="frameworks">APIs</div>
+				<div class="frameworks">SCSS</div>
+				<div class="frameworks">ES6</div>
+				<div class="frameworks">HTML & CSS</div>
+				<p>A booksearch website wherein the user can search for and store books by a particular author.</p>
+				<button><a href="http://darshanasen.com/bookshare/" target="_blank">View Live</a></button>
+				<button><a href="https://github.com/darshanasen/projectThree" target="_blank">GitHub Repo</a></button>
+			</div>
 		</div>
-		<div>
-			<img src="assets/fakenewsLaptop.png" width="450" height="224" alt="" />
-				<div class="overlay">
-					<p>Pair Programming Project</p>
-				</div>
-		</div>
-	</div>
-	<div class="portfolioGrid">
-		<div>
-			<img src="assets/bookeshareLaptop.png" width="450" height="224" alt="" />
-				<div class="overlay">
-					<p>Client Project</p>
-				</div>
-		</div>
-		<div class="portfolioDescription right">
-			<h3>Bookshare</h3>
-			<div class="frameworks">JavaScript</div>
-			<div class="frameworks">jQuery</div>
-			<div class="frameworks">Firebase</div>
-			<div class="frameworks">APIs</div>
-			<div class="frameworks">Sass</div>
-			<div class="frameworks">HTML & CSS</div>
-			<p>A booksearch website wherein the user can search for and store books by a particular author.</p>
-			<button><a href="http://darshanasen.com/bookshare/" target="_blank">View Live</a></button>
-			<button><a href="https://github.com/darshanasen/projectThree" target="_blank">GitHub Repo</a></button>
-		</div>
-	</div>
-	<div class="portfolioGrid">
-		<div class="portfolioDescription left">
-			<h3>Baker & Coffee</h3>
-			<div class="frameworks">HTML & CSS</div>
-			<div class="frameworks">Sass</div>
-			<p>A PSD to responsive site conversion.</p>
-			<button><a href="http://darshanasen.com/bakery/" target="_blank">View Live</a></button>
-			<button><a href="https://github.com/darshanasen/projectTwo" target="_blank">GitHub Repo</a></button>
-		</div>
-		<div>
-			<img src="assets/bakeryLaptop.png" width="450" height="224" alt="" />
-				<div class="overlay">
-					<p>PSD Project</p>
-				</div>
+		<div class="portfolioGrid gridRight">
+			<div class="portfolioDescription left">
+				<h3>Baker & Coffee</h3>
+				<div class="frameworks">HTML & CSS</div>
+				<div class="frameworks">SCSS</div>
+				<p>A PSD to responsive site conversion.</p>
+				<button><a href="http://darshanasen.com/bakery/" target="_blank">View Live</a></button>
+				<button><a href="https://github.com/darshanasen/projectTwo" target="_blank">GitHub Repo</a></button>
+			</div>
+			<div>
+				<img src="https://unsplash.it/500/500" alt="" />
+					<div class="overlay">
+						<p>PSD Project</p>
+					</div>
+			</div>
 		</div>
 	</div>
 </section>
 
 <section id="skillz" class="skillz">
 	<h2>Skillz</h2>
-		<div class="toolbox">
+		<div class="toolbox wrapper">
 		<h3>Current Toolbox</h3>
 			<div class="box1">
 				<i class="devicon-html5-plain-wordmark"></i>

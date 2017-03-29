@@ -115,7 +115,7 @@ section.opening {
 	        content: '';
 	        position: absolute;
 	        top: 0px;
-	        left: 500px;
+	        left: 300px;
 	        height: 90px;
 	        width: 50px;
 	        border-top: 10px solid white;
@@ -124,8 +124,8 @@ section.opening {
 		&::after {
 	        content: '';
 	        position: absolute;
-	        bottom: -65px;
-	        right: 50px;
+	        bottom: -50px;
+	        right: 300px;
 	        height: 90px;
 	        width: 50px;
 	        border-bottom: 10px solid white;
