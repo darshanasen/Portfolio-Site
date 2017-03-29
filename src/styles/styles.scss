@@ -3,7 +3,7 @@
 @import 'partials/header';
 @import 'partials/footer';
 
-section.about, section.skillz h2, section.skillz div.toolbox, section.skillz div.interests1, section.skillz div.interests2 {
+section.about, section.skillz h2, section.skillz div.toolbox {
 	transform: skewY(-5deg);
 }
 
@@ -14,11 +14,17 @@ section.about img, section.about h2, section.about p, section.skillz{
 section.about {
 	background-color: white;
 	margin: -90px 0;
+	padding: 5%;
 }
 
 div.about {
 	display: flex;
 	align-items: center;
+}
+
+div.about img {
+	 width: 400px;
+	 height: 444px;
 }
 
 section.about h2 {
@@ -38,7 +44,7 @@ section.about h2 {
 }
 
 div.aboutText {
-	padding: 5%;
+	padding: 8%;
 }
 
 section.about img {
@@ -71,10 +77,49 @@ section.about img {
   opacity: 1;
 }
 
+@media (max-width: 960px) {
+	div.about {
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 720px) {
+	section.about h2::after {
+		right: -20px;
+	}
+}
+
+@media (max-width: 550px) {
+	div.about img {
+		width: 300px;
+		height: 333px;
+	}
+		div.about h2::after {
+		top: -15px;
+		right: -15px;
+		border-top: 5px solid $navColor;
+		border-right: 5px solid $navColor;
+		width: 30px;
+		height: 45px;
+}
+}
+
 section.portfolio {
 	background-color: $portfolioColor;
 	padding: 15%;
 	margin: -100px 0;
+}
+
+@media (max-width: 950px) {
+	section.portfolio {
+	padding: 20%;
+}
+}
+
+@media (max-width: 550px) {
+	section.portfolio {
+	margin-top: 10%;
+}
 }
 
 section.portfolio h2 {
@@ -92,14 +137,34 @@ section.portfolio h2 {
 	    }
 }
 
+@media (max-width: 950px) {
+	section.portfolio h2::before {
+		top: -15px;
+	    left: -50px;
+	}
+}
+
+@media (max-width: 550px) {
+	section.portfolio h2::before {
+		top: -15px;
+		left: -55px;
+		border-top: 5px solid $overlayColor;
+		border-left: 5px solid $overlayColor;
+		width: 30px;
+		height: 45px;
+	}
+}
+
 div.portfolioGrid {
 	display: flex;
 	justify-content: space-between;
 	margin: 10% 0;
+	align-items: center;
 }
 
 div.portfolioGrid h3 {
 	font-family: $headerFont;
+	font-size: 3.5rem;
 }
 
 div.portfolioGrid button {
@@ -109,6 +174,7 @@ div.portfolioGrid button {
 	box-shadow: 0 6px $overlayColor;
 	padding: 10px;
 	margin: 10px;
+	transition: all 0.3s ease;
 }
 
 div.portfolioGrid button:hover {
@@ -120,12 +186,28 @@ div.portfolioGrid a {
 	color: black;
 }
 
-div.portfolioGrid div {
-	width: 50%;
+div.portfolioGrid div.img {
+	width: 60%;
+}
+
+div.portfolioGrid div img{
+	width: 100%;
+}
+
+@media (max-width: 1050px) {
+	div.portfolioGrid div.img {
+	width: 100%;
+}
 }
 
 div.portfolioDescription {
-	width: 50%;
+	width: 38%;
+}
+
+@media (max-width: 1050px) {
+div.portfolioDescription {
+	width: 100%;
+}
 }
 
 section.portfolio div {
@@ -140,15 +222,15 @@ section.portfolio div.gridLeft .overlay {
 	left: 0;
 	bottom: 0;
 	right: 0;
-	background-color: $overlayColor;
+	background-color: $headerColor;
 	clip-path: polygon(0% 0%, 25% 0, 85% 100%, 0% 100%);
 	opacity: .9;
 	transition: all 0.5s ease;
 }
 
 div.gridLeft div:hover .overlay {
-	clip-path: polygon(0% 0%, 15% 0%, 15% 100%, 0% 100%);
-	opacity: 0.7;
+	clip-path: polygon(0% 0%, 5% 0%, 5% 100%, 0% 100%);
+	opacity: 0;
 	display: block;
 }
 
@@ -160,16 +242,30 @@ section.portfolio div.gridRight .overlay {
 	left: 0;
 	bottom: 0;
 	right: 0;
-	background-color: $overlayColor;
+	background-color: $headerColor;
 	clip-path: polygon(75% 0%, 100% 0%, 100% 100%, 15% 100%);
 	opacity: .9;
 	transition: all 0.5s ease;
 }
 
 div.gridRight div:hover .overlay {
-	clip-path: polygon(85% 0%, 100% 0%, 100% 100%, 85% 100%);
-	opacity: 0.7;
+	clip-path: polygon(95% 0%, 100% 0%, 100% 100%, 95% 100%);
+	opacity: 0;
 	display: block;
+}
+
+@media (max-width: 1050px) {
+	div.gridLeft {
+	display: flex;
+	flex-direction: column;
+}
+}
+
+@media (max-width: 1050px) {
+	div.gridRight {
+	display: flex;
+	flex-direction: column-reverse;
+}
 }
 
 div.portfolioGrid .overlay p {
@@ -178,24 +274,25 @@ div.portfolioGrid .overlay p {
 	margin: 0;
 }
 
-div.gridRight::after {
-	        content: '';
-	        position: absolute;
-	        top: -60px;
-	        right: -20px;
-	        height: 400px;
-	        width: 200px;
-	        border-top: 10px solid $navColor;
-	        border-right: 10px solid $navColor;
-	        border-bottom: 10px solid $navColor;
-	        z-index: 1;
-}
+// div.gridRight::after {
+// 	        content: '';
+// 	        position: absolute;
+// 	        top: -60px;
+// 	        right: -20px;
+// 	        height: 400px;
+// 	        width: 200px;
+// 	        border-top: 10px solid $navColor;
+// 	        border-right: 10px solid $navColor;
+// 	        border-bottom: 10px solid $navColor;
+// 	        z-index: 1;
+// }
 
 div.frameworks {
 	border-bottom: 3px solid $navColor;
 	border-top: 3px solid $navColor;
 	margin-right: 2%;
 	display: inline;
+	line-height: 3.2rem;
 }
 
 div.right {
@@ -235,10 +332,18 @@ section.skillz i {
 	padding: 2%;
 }
 
-section.skillz svg {
-	fill: $navColor;
-	width: 7rem;
-	height: 7rem;
+@media (max-width: 550px) {
+	section.skillz i {
+	font-size: 5rem;
+	}
+}
+
+div.interests {
+	display: flex;
+	justify-content: space-between;
+	width: 70%;
+	margin: 0 auto;
+	transform: skewY(-5deg);
 }
 
 div.interests1, div.interests2 {
@@ -246,9 +351,9 @@ div.interests1, div.interests2 {
 	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	width: 70%;
-	margin: 0 auto;
-	padding: 5%;
+	// width: 70%;
+	// margin: 0 auto;
+	// padding: 5%;
 }
 
 div.box3, div.box4 {
@@ -262,9 +367,34 @@ div.toolbox {
 	justify-content: space-around;
 	width: 70%;
 	margin: 0 auto;
+	margin-bottom: 5%;
 }
 
-div.box1, div.box2 {
+div.box1, div.box2, div.box3 {
 	display: flex;
 	justify-content: space-between;
+}
+
+@media (max-width: 1160px) {
+	div.interests {
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 870px) {
+	section.skillz h2::after {
+		top: -25px;
+		right: -25px;
+	}
+}
+
+@media (max-width: 550px) {
+	section.skillz h2::after {
+		top: -15px;
+		right: -15px;
+		border-top: 5px solid $navColor;
+		border-right: 5px solid $navColor;
+		width: 30px;
+		height: 45px;
+	}
 }
