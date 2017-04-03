@@ -162,7 +162,8 @@ p {
   font-size: 2rem; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: inherit; }
 
 .wrapper {
   max-width: 1200px;
@@ -180,6 +181,10 @@ header {
 
 .menuDiv {
   margin-bottom: 10%; }
+
+@media (max-width: 1280px) {
+  .menuDiv {
+    margin-bottom: 0; } }
 
 @media (max-width: 550px) {
   .menuDiv {
@@ -370,7 +375,10 @@ span.alternateJob:before {
   font-size: 6rem;
   animation-name: jobTitle;
   animation-duration: 20s;
-  animation-iteration-count: infinite; }
+  animation-iteration-count: infinite;
+  -webkit-animation-name: jobTitle;
+  -webkit-animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite; }
 
 @media (max-width: 1000px) {
   section.opening h1 {

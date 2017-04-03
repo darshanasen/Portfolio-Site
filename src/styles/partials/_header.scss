@@ -12,6 +12,12 @@ header {
 	margin-bottom: 10%;
 }
 
+@media (max-width: 1280px) {
+	.menuDiv {
+	margin-bottom: 0;
+}
+}
+
 @media (max-width: 550px) {
 	.menuDiv {
 	margin-bottom: 70%;
@@ -252,6 +258,9 @@ span.alternateJob:before {
 	animation-name: jobTitle;
 	animation-duration: 20s;
 	animation-iteration-count: infinite;
+	-webkit-animation-name: jobTitle;
+	-webkit-animation-duration: 20s;
+	-webkit-animation-iteration-count: infinite;
 }
 
 @media (max-width: 1000px) {
@@ -301,6 +310,53 @@ span.alternateJob:before {
 	}
 }
 
+@-webkit-keyframes jobTitle {
+  0% {
+    opacity: 0;
+    content: "Midnight Snacker"; }
+  10% {
+    opacity: 1;
+    content: "Midnight Snacker"; }
+  19% {
+    opacity: 0;
+    content: "Midnight Snacker"; }
+  20% {
+    opacity: 0;
+    content: "Bonafide Hustler"; }
+  30% {
+    opacity: 1;
+    content: "Bonafide Hustler"; }
+  39% {
+    opacity: 0;
+    content: "Bonafide Hustler"; }
+  40% {
+    opacity: 0;
+    content: "Jumanji Enthusiast"; }
+  50% {
+    opacity: 1;
+    content: "Jumanji Enthusiast"; }
+  59% {
+    opacity: 0;
+    content: "Jumanji Enthusiast"; }
+  60% {
+    opacity: 0;
+    content: "Punball Wizard"; }
+  70% {
+    opacity: 1;
+    content: "Punball Wizard"; }
+  79% {
+    opacity: 0;
+    content: "Punball Wizard"; }
+  80% {
+    opacity: 0;
+    content: "Cookie Maker"; }
+  89% {
+    opacity: 1;
+    content: "Cookie Maker"; }
+  100% {
+    opacity: 0;
+    content: "Cookie Maker"; } }
+
 @keyframes jobTitle {
 	0% {opacity: 0; content: "Midnight Snacker"}
 	10% {opacity: 1; content: "Midnight Snacker"}
@@ -319,5 +375,7 @@ span.alternateJob:before {
 	100% {opacity: 0; content: "Cookie Maker"}
 // 100% {opacity: 1; content: "One-Hit Wonder"}
 }
+
+
 
 
