@@ -255,12 +255,12 @@ section.opening h1, span.name, span.and {
 span.alternateJob:before {
 	content: "";
 	font-size: 6rem;
-	animation-name: jobTitle;
-	animation-duration: 20s;
-	animation-iteration-count: infinite;
 	-webkit-animation-name: jobTitle;
 	-webkit-animation-duration: 20s;
 	-webkit-animation-iteration-count: infinite;
+	animation-name: jobTitle;
+	animation-duration: 20s;
+	animation-iteration-count: infinite;
 }
 
 @media (max-width: 1000px) {

@@ -19,7 +19,7 @@ gulp.task('styles', () => {
             message: "Error: <%= error.message %>",
             title: 'Error in CSS 💀'
         })))
-    .pipe(autoprefixer('last 2 versions', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
+    .pipe(autoprefixer('last 5 versions', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
     .pipe(concat('style.css'))
     .pipe(gulp.dest('./public/styles/'))
     .pipe(reload({stream: true}));
