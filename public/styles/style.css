@@ -171,27 +171,10 @@ a {
 
 header {
   background-color: #ffd521;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
   height: 100vh; }
 
 .menuDiv {
-  margin-bottom: 10%; }
-
-@media (max-width: 1280px) {
-  .menuDiv {
-    margin-bottom: 0; } }
-
-@media (max-width: 550px) {
-  .menuDiv {
-    margin-bottom: 70%; } }
+  padding: 50px 0; }
 
 .menuBG {
   background-color: #e2a301;
@@ -200,7 +183,7 @@ header {
   z-index: 999;
   position: relative;
   cursor: pointer;
-  margin: 10px auto; }
+  margin: 0 auto; }
 
 .hamburger.animate {
   -webkit-transform: rotate(90deg) translateY(0px);
@@ -251,9 +234,9 @@ header {
           transform: rotate(40deg) translateX(10px); }
 
 ul.nav {
+  padding: 0;
   list-style-type: none;
   margin: 0;
-  padding: 10%;
   width: 100%;
   position: fixed;
   height: 100vh;
@@ -269,9 +252,12 @@ ul.nav {
 
 ul.nav li {
   text-align: center;
-  padding: 3%;
   transition: top 1.5s ease;
-  font-family: "Playfair Display", serif; }
+  font-family: "Playfair Display", serif;
+  padding: 3%; }
+
+ul.nav li:first-child {
+  margin-top: 200px; }
 
 ul.nav a:hover {
   border-bottom: 3px solid #e2a301; }
@@ -281,37 +267,16 @@ ul.nav li a {
   text-transform: uppercase;
   font-size: 4rem; }
 
-@media (max-width: 1300px) {
-  ul.nav {
-    padding: 20%; }
-  ul.nav li {
-    padding: 6%; } }
-
-@media (max-width: 900px) {
-  ul.nav {
-    padding: 30%; }
-  ul.nav li {
-    padding: 10%; } }
-
-@media (max-width: 680px) {
-  ul.nav li {
-    padding: 15%; } }
-
-@media (max-width: 550px) {
-  ul.nav li {
-    margin-top: 20%; } }
-
 @media (max-width: 500px) {
   ul.nav li a {
     font-size: 3rem; } }
 
 @media (max-width: 400px) {
-  ul.nav li {
-    margin-top: 30%; }
   ul.nav li a {
     font-size: 2.5rem; } }
 
 section.opening {
+  padding: 150px 0;
   background-color: #ffd521;
   width: 100%;
   text-align: center;
@@ -382,16 +347,6 @@ section.opening h2 {
 section.opening h1, span.name, span.and {
   text-shadow: 3px 3px #daeee9, 5px 5px #67917a; }
 
-span.alternateJob:before {
-  content: "";
-  font-size: 6rem;
-  -webkit-animation-name: jobTitle;
-  -webkit-animation-duration: 20s;
-  -webkit-animation-iteration-count: infinite;
-  animation-name: jobTitle;
-  animation-duration: 20s;
-  animation-iteration-count: infinite; }
-
 @media (max-width: 1000px) {
   section.opening h1 {
     font-size: 12rem; }
@@ -423,100 +378,6 @@ span.alternateJob:before {
     margin-bottom: 20%; }
   section.opening h2, span.alternateJob:before {
     font-size: 2rem; } }
-
-@-webkit-keyframes jobTitle {
-  0% {
-    opacity: 0;
-    content: "Midnight Snacker"; }
-  10% {
-    opacity: 1;
-    content: "Midnight Snacker"; }
-  19% {
-    opacity: 0;
-    content: "Midnight Snacker"; }
-  20% {
-    opacity: 0;
-    content: "Bonafide Hustler"; }
-  30% {
-    opacity: 1;
-    content: "Bonafide Hustler"; }
-  39% {
-    opacity: 0;
-    content: "Bonafide Hustler"; }
-  40% {
-    opacity: 0;
-    content: "Jumanji Enthusiast"; }
-  50% {
-    opacity: 1;
-    content: "Jumanji Enthusiast"; }
-  59% {
-    opacity: 0;
-    content: "Jumanji Enthusiast"; }
-  60% {
-    opacity: 0;
-    content: "Punball Wizard"; }
-  70% {
-    opacity: 1;
-    content: "Punball Wizard"; }
-  79% {
-    opacity: 0;
-    content: "Punball Wizard"; }
-  80% {
-    opacity: 0;
-    content: "Cookie Maker"; }
-  89% {
-    opacity: 1;
-    content: "Cookie Maker"; }
-  100% {
-    opacity: 0;
-    content: "Cookie Maker"; } }
-
-@keyframes jobTitle {
-  0% {
-    opacity: 0;
-    content: "Midnight Snacker"; }
-  10% {
-    opacity: 1;
-    content: "Midnight Snacker"; }
-  19% {
-    opacity: 0;
-    content: "Midnight Snacker"; }
-  20% {
-    opacity: 0;
-    content: "Bonafide Hustler"; }
-  30% {
-    opacity: 1;
-    content: "Bonafide Hustler"; }
-  39% {
-    opacity: 0;
-    content: "Bonafide Hustler"; }
-  40% {
-    opacity: 0;
-    content: "Jumanji Enthusiast"; }
-  50% {
-    opacity: 1;
-    content: "Jumanji Enthusiast"; }
-  59% {
-    opacity: 0;
-    content: "Jumanji Enthusiast"; }
-  60% {
-    opacity: 0;
-    content: "Punball Wizard"; }
-  70% {
-    opacity: 1;
-    content: "Punball Wizard"; }
-  79% {
-    opacity: 0;
-    content: "Punball Wizard"; }
-  80% {
-    opacity: 0;
-    content: "Cookie Maker"; }
-  89% {
-    opacity: 1;
-    content: "Cookie Maker"; }
-  100% {
-    opacity: 0;
-    content: "Cookie Maker"; } }
 
 footer {
   background-color: #ffd521;

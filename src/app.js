@@ -10,4 +10,16 @@
 		$('.hamburger').toggleClass('animate')
 	})
 
+	const jobs = new Array('Midnight Snacker', 'Bonafide Hustler', 'Jumanji Enthusiast', 'Pun-Hit Wonder', 'Cookie Maker', 'Pinball Wizard');
+
+	var i = 0;
+	setInterval(function() {
+		$('.alternateJob').empty().append(jobs[i]);
+		if(i < jobs.length - 1) {
+			i++;
+		} else {
+			i = 0;
+		}
+	}, 2000);
+
 })();
